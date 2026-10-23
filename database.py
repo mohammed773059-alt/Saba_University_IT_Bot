@@ -1,5 +1,4 @@
 import sqlite3
-import datetime
 
 DB_NAME = "library.db"
 
@@ -37,9 +36,9 @@ def init_db():
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             subject_id INTEGER,
             lecture_id INTEGER,
-            section_type TEXT NOT NULL, -- lectures, videos, assignments, files, attachments
+            section_type TEXT NOT NULL,
             title TEXT NOT NULL,
-            file_type TEXT, -- pdf, video, image, text, link, document
+            file_type TEXT,
             file_id TEXT,
             description TEXT,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
