@@ -29,6 +29,8 @@ def home():
 
 def run_telegram_bot():
     print("🤖 البوت يعمل الآن بنجاح...")
+    # مسح أي تواصل ويب هوك سابق لضمان عمل الأزرار بشكل فوري
+    bot.remove_webhook()
     bot.infinity_polling(none_stop=True)
 
 if __name__ == "__main__":
